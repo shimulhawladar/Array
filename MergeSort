@@ -1,0 +1,53 @@
+<?php
+
+/*Quastion:
+
+Array 1 : [1, 3 , 6, 8] //Sorted 
+Array 2 : [2, 5, 7, 9, 11] //Sorted
+
+MergeSort : [1, 2, 3, 5, 6, 7 ,8, 9, 11] // Output
+
+
+
+Ans.
+*/
+
+
+//echo "<pre>";
+
+
+
+/*$b = Array('num' => 8, 'lat' => 'hello', 'new'=>array('rice'=> '$5', 'eag'=>'$4'));
+
+echo $b['new']['rice'];*/
+
+
+$array1 = array(1, 3 , 6, 8);
+$array2 = array(2, 5, 7, 9, 11);
+
+
+//Way One
+$array3 = array_merge($array1, $array2);
+
+sort($array3);
+
+$arrlength = count($array3);
+for($x = 0; $x < $arrlength; $x++) {
+    echo $array3[$x];
+    echo ", ";
+};
+ 
+echo "<br>";
+
+//Way Two
+$count = count($array2);
+
+for($x = 0; $x < $count; $x++ ){
+    
+    if(!empty($array1[$x])){
+        
+        echo $array1[$x].", ";
+    }
+    
+    echo $array2[$x].", ";
+}
